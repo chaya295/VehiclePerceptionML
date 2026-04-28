@@ -1,0 +1,21 @@
+data:
+  dataset_path: "/path/to/dataset"
+  batch_size: 32
+  shuffle: true
+model:
+  model_name: "ResNet50"
+  num_classes: 10
+  input_shape: [224, 224, 3]
+training:
+  epochs: 50
+  learning_rate: 0.001
+  optimizer: "adam"
+  loss_function: "categorical_crossentropy"
+augmentation:
+  horizontal_flip: true
+  rotation_range: 20
+  width_shift_range: 0.1
+  height_shift_range: 0.1
+inference:
+  checkpoint_path: "/path/to/checkpoint"
+  confidence_threshold: 0.5
